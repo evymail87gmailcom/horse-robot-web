@@ -11,8 +11,8 @@ function menu() {
         var menuItem = document.createElement("li");
         var link = document.createElement("a");
     }
-        link.href = links[i][1];
-        link.appendChild(document.createTextNode(links[i][0]));
+        link.href = menuItem[i][1];
+        link.appendChild(document.createTextNode(menuItem[i][0]));
         menuItem.appendChild(link)
         document.getElementById("menu").appendChild(menuItem);
     }

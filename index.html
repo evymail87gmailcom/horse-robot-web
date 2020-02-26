@@ -4,26 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://github.com/Marialoue/horse-robot-web/blob/master/main.css">
     <title>Horse robot project</title>
 </head>
 
 <body>
     <div class="page">
         <div class="header-wrapping">
-            <h2>This is the horse robot's project site</h2><h3>
+            <h2>Welcome to the horse robot's project site</h2>
         </div>
 
         <div class="left">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sensors.html">Sensors</a></li>
-                <li><a href="circut.html">Circut</a></li>
-                <li><a href="process.html">The process</a></li>
-            </ul>
+                <ul id="menu">
+                    <script>menu()</script>
+                </ul>
         </div>
         <div class="main">
             <img src="index_img.png" width="80%">
+            <p>Text</p>
         </div>
         <div class="right">
             <ul>
@@ -38,6 +36,9 @@
             <div class="innerbox">&copy; 2020 EM PROJECTS</div>
         </div>
 
+    </div>
+    <div id="script">
+        <script src="script.js"></script>
     </div>
 </body>
 

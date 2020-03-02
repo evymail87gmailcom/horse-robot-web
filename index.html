@@ -4,28 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://github.com/Marialoue/horse-robot-web/blob/master/main.css">
+    <link rel="stylesheet" type="text/css" a href="main.css">
     <title>Horse robot project</title>
+    <script>
+        function showMenu(){};
+    </script>
+
 </head>
 
 <body>
     <div class="page">
         <div class="header-wrapping">
-            <h2>Welcome to the horse robot's project site</h2>
+            <h1>Welcome to the horse robot's project site</h1>
         </div>
 
         <div class="left">
-                <ul id="menu">
-                    <script>menu()</script>
-                    <li><a href="https://github.com/Marialoue/horse-robot-web/blob/master/sensors.html">Sensors</a></li>
-                </ul>
+            <ul id="menu"></ul>
+
+            <button onclick="showMenu()">Meny</button>
+
         </div>
         <div class="main">
             <img src="index_img.png" width="80%">
             <p>Text</p>
         </div>
         <div class="right">
-            <ul>
+            <ul id="right-menu"> // build js script for this
                 <li>Daily sensors values:</li>
                 <li>Distance</li>
                 <li>Soundlevel</li>
@@ -39,7 +43,7 @@
 
     </div>
     <div id="script">
-        <script src="https://github.com/Marialoue/horse-robot-web/blob/master/script.js"></script>
+        <script src="script.js"></script>
     </div>
 </body>
 

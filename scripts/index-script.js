@@ -7,8 +7,8 @@ function addHeader(){
     header.appendChild(text);
     document.body.appendChild(header); // add header to body
 }
-
-addHeader();
+ 
+addHeader(); 
 
 function addMenu() {
     var menu = document.createElement("div");

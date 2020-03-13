@@ -1,15 +1,13 @@
 console.log("Hello world from web script")
 
 function addHeader(){
-    var header = document.createElement("h1");
+    var header = document.createElement("div");
     header.className = "header"; // assign name for css file
     var text = document.createTextNode("Welcome");
     header.appendChild(text);
     document.body.appendChild(header); // add header to body
 }
  
-addHeader(); 
-
 function addMenu() {
     var menu = document.createElement("div");
     menu.className = "menu";
@@ -21,9 +19,9 @@ function addMenu() {
     menu.appendChild(menubutton);
 
     //div with links
-    var dropDownContent = document.createElement("div");
-    dropDownContent.className = "dropDownContent";
-    menubutton.appendChild(dropDownContent);
+    var linkContent = document.createElement("div");
+    linkContent.className = "linkContent";
+    menubutton.appendChild(linkContent);
 
     var links = [
         ["Home", "/horse-robot-web/index.html"],
@@ -37,21 +35,27 @@ function addMenu() {
         link.href = links[i][1];                                // add link adress to menuItem links
         link.appendChild(document.createTextNode(links[i][0])); // create textnode inside link starting on place 0
         list.appendChild(link)                                  // add list in link
-        dropDownContent.appendChild(list);
+        linkContent.appendChild(list);
     }
 }
-
-addMenu();
 
 function addMain(){
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
-    var text = document.createTextNode("Main div");
-    main.appendChild(text);
     document.body.appendChild(main); // add div to body
-}
 
-addMain();
+        // div with text
+        var leftDiv = document.createElement("div");
+        leftDiv.className = "left-div";
+        var leftText = document.createTextNode("We embarked on this journey as novice programmers, unsure of what the results would be. Here you can follow our story to greatness - building the horse robot of our dreams.");
+        leftDiv.appendChild(leftText);
+        main.appendChild(leftDiv);
+    
+        // div with picture
+        var rightDiv = document.createElement("div"); 
+        rightDiv.className = "right-div";
+        main.appendChild(rightDiv);
+}
 
 function addFooter(){
     var footer = document.createElement("div");
@@ -61,4 +65,8 @@ function addFooter(){
     document.body.appendChild(footer); // add div to body
 }
 
+
+addHeader(); 
+addMenu();
+addMain();
 addFooter();

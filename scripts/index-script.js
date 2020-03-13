@@ -1,15 +1,20 @@
 console.log("Hello world from web script")
 
+function addPage(){
+    var page = document.createElement("div");
+    page.className = "page"; 
+    document.body.appendChild(page); // place page div in body div
+    console.log("hello from page");
+}
+
 function addHeader(){
-    var header = document.createElement("h1");
+    var header = document.createElement("div");
     header.className = "header"; // assign name for css file
     var text = document.createTextNode("Welcome");
     header.appendChild(text);
     document.body.appendChild(header); // add header to body
 }
  
-addHeader(); 
-
 function addMenu() {
     var menu = document.createElement("div");
     menu.className = "menu";
@@ -21,9 +26,9 @@ function addMenu() {
     menu.appendChild(menubutton);
 
     //div with links
-    var dropDownContent = document.createElement("div");
-    dropDownContent.className = "dropDownContent";
-    menubutton.appendChild(dropDownContent);
+    var linkContent = document.createElement("div");
+    linkContent.className = "linkContent";
+    menubutton.appendChild(linkContent);
 
     var links = [
         ["Home", "/horse-robot-web/index.html"],
@@ -37,28 +42,50 @@ function addMenu() {
         link.href = links[i][1];                                // add link adress to menuItem links
         link.appendChild(document.createTextNode(links[i][0])); // create textnode inside link starting on place 0
         list.appendChild(link)                                  // add list in link
-        dropDownContent.appendChild(list);
+        linkContent.appendChild(list);
     }
 }
-
-addMenu();
 
 function addMain(){
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
-    var text = document.createTextNode("Main div");
-    main.appendChild(text);
     document.body.appendChild(main); // add div to body
+
+    // div with text
+    var leftDiv = document.createElement("div");
+    leftDiv.className = "left-div";
+    var leftText = document.createTextNode("Welcome. We've been expecting you.");
+    var horseSpeak = document.createTextNode("HELLO. I'M CLOUDIA.");
+
+    var valueText = document.createElement("p"); // paragraph with sensor sensorValue
+    valueText.id = "sensorValue";
+
+    leftDiv.appendChild(leftText);
+    leftDiv.appendChild(horseSpeak); 
+    leftDiv.appendChild(valueText);
+    main.appendChild(leftDiv);
+
+    // div with picture
+    var rightDiv = document.createElement("div"); 
+    rightDiv.className = "right-div";
+    main.appendChild(rightDiv);
+
 }
 
-addMain();
+function getDataFromNodeText(tests){
+    document.getElementById("sensorValue").innerHTML = tests;
+}
 
 function addFooter(){
     var footer = document.createElement("div");
     footer.className = "footer"; // assign name for css file
-    var text = document.createTextNode("© 2020 EM PROJECTS");
-    footer.appendChild(text);
+    var footerText = document.createTextNode("© 2020 EM PROJECTS");
+    footer.appendChild(footerText);
     document.body.appendChild(footer); // add div to body
 }
 
+addPage();
+addHeader(); 
+addMenu();
+addMain();
 addFooter();

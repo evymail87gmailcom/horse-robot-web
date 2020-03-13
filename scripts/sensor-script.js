@@ -1,14 +1,12 @@
 console.log("Hello world from web script")
 
-function addHeader(){
-    var header = document.createElement("h1");
+function addHeader() {
+    var header = document.createElement("div");
     header.className = "header"; // assign name for css file
     var text = document.createTextNode("Welcome");
     header.appendChild(text);
     document.body.appendChild(header); // add header to body
 }
-
-addHeader();
 
 function addMenu() {
     var menu = document.createElement("div");
@@ -21,9 +19,9 @@ function addMenu() {
     menu.appendChild(menubutton);
 
     //div with links
-    var dropDownContent = document.createElement("div");
-    dropDownContent.className = "dropDownContent";
-    menubutton.appendChild(dropDownContent);
+    var linkContent = document.createElement("div");
+    linkContent.className = "linkContent";
+    menubutton.appendChild(linkContent);
 
     var links = [
         ["Home", "/horse-robot-web/index.html"],
@@ -37,31 +35,43 @@ function addMenu() {
         link.href = links[i][1];                                // add link adress to menuItem links
         link.appendChild(document.createTextNode(links[i][0])); // create textnode inside link starting on place 0
         list.appendChild(link)                                  // add list in link
-        dropDownContent.appendChild(list);
+        linkContent.appendChild(list);
     }
 }
 
-addMenu();
-
-function addMain(){
+function addMain() {
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
-    var text = document.createTextNode("Main div");
-    main.appendChild(text);
     document.body.appendChild(main); // add div to body
+
+    // add function for scalable sensor picture with sensor data
+
+    // paragraph with text
+    var leftDiv = document.createElement("div");
+    leftDiv.className = "left-div";
+    var leftText = document.createTextNode("We used a lot of parts (not counting all the glue needed to assembly this rocket) for our Cloudia. There are four 180° servos, one ultrasonic sensor, two big sound sensors and one gas sensor that detacted combustible, flammable and toxic gases, and oxygen depletion.");
+    leftDiv.appendChild(leftText);
+    main.appendChild(leftDiv);
+
+    // div with picture
+    var rightDiv = document.createElement("div"); 
+    var rightImage = document.createElement("img");
+    rightImage.src = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.humanesociety.org%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1240x698%2Fpublic%2F2019%2F04%2Fhorses-in-field.jpg%3Fh%3Db1bbae60%26itok%3DUOHYkWx8&imgrefurl=https%3A%2F%2Fwww.humanesociety.org%2Fanimals%2Fhorses&docid=IelZM2nMSzZbIM&tbnid=ZqmdsAGxkNNreM%3A&vet=10ahUKEwjDke7Z05XoAhWrtYsKHYPkDhQQMwhNKAAwAA..i&w=1240&h=698&bih=651&biw=801&q=horses&ved=0ahUKEwjDke7Z05XoAhWrtYsKHYPkDhQQMwhNKAAwAA&iact=mrc&uact=8';
+    rightImage.width = "250";
+    rightDiv.className = "right-div";
+    rightDiv.appendChild(rightImage);
+    main.appendChild(rightDiv);
 }
 
-addMain();
-
-function addFooter(){
+function addFooter() {
     var footer = document.createElement("div");
     footer.className = "footer"; // assign name for css file
-    var text = document.createTextNode("Footer div");
+    var text = document.createTextNode("© 2020 EM PROJECTS");
     footer.appendChild(text);
     document.body.appendChild(footer); // add div to body
 }
 
+addHeader();
+addMenu();
+addMain();
 addFooter();
-
-
-//&copy; 2020 EM PROJECTS

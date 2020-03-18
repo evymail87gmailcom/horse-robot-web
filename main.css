@@ -20,6 +20,10 @@ h1{
     font-size: 2.5rem;
 }
 
+p{
+    color:#000;
+}
+
 ul{
     list-style-type: none;
 }
@@ -49,7 +53,7 @@ li a:hover, a:active{
     box-shadow:0px 5px 15px 9px rgba(153, 125, 107, 0.89);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.5rem; 
     overflow-wrap: break-word;
     position: relative;
     align-items: center;
@@ -104,9 +108,8 @@ li a:hover, a:active{
     width: 48%;
     height: 100%;
     float: right;
-    background-image: url("images/index_img.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 .left-div{
@@ -115,6 +118,11 @@ li a:hover, a:active{
     float: left;
 }
 
+.sensorListItem{
+    background-color: rgba(153, 125, 107, 0.322);
+    color:rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.15rem;
+}
 
 .footer{
     clear: both; 
@@ -132,5 +140,4 @@ li a:hover, a:active{
     position: fixed;
     align-items: center;
     justify-content: center;
-
 }

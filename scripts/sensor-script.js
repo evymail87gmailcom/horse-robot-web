@@ -43,7 +43,7 @@ function addMain() {
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
     document.body.appendChild(main); // add div to body
-
+ 
     // add function for scalable sensor picture with sensor data
 
     // paragraph with text
@@ -56,11 +56,12 @@ function addMain() {
     // div with picture
     var rightDiv = document.createElement("div"); 
     var rightImage = document.createElement("img");
-    rightImage.src = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.humanesociety.org%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F1240x698%2Fpublic%2F2019%2F04%2Fhorses-in-field.jpg%3Fh%3Db1bbae60%26itok%3DUOHYkWx8&imgrefurl=https%3A%2F%2Fwww.humanesociety.org%2Fanimals%2Fhorses&docid=IelZM2nMSzZbIM&tbnid=ZqmdsAGxkNNreM%3A&vet=10ahUKEwjDke7Z05XoAhWrtYsKHYPkDhQQMwhNKAAwAA..i&w=1240&h=698&bih=651&biw=801&q=horses&ved=0ahUKEwjDke7Z05XoAhWrtYsKHYPkDhQQMwhNKAAwAA&iact=mrc&uact=8';
-    rightImage.width = "250";
+    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/circut_img.png";
+    rightImage.width = "300";
     rightDiv.className = "right-div";
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
+    
 }
 
 function addFooter() {

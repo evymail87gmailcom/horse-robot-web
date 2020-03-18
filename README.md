@@ -1,2 +1,2 @@
 # horse-robot-web
-website for horse robot project
+This is the official website for horse robot project. 

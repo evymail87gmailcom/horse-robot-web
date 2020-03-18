@@ -55,25 +55,91 @@ function addMain(){
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
     var leftText = document.createTextNode("Welcome. We've been expecting you.");
-    var horseSpeak = document.createTextNode("HELLO. I'M CLOUDIA.");
-
-    var valueText = document.createElement("p"); // paragraph with sensor sensorValue
-    valueText.id = "sensorValue";
-
+    var horseSpeak = document.createTextNode(" HELLO. I'M CLOUDIA. HERE IS MY STATUS:");
     leftDiv.appendChild(leftText);
     leftDiv.appendChild(horseSpeak); 
-    leftDiv.appendChild(valueText);
+
+
+    // test varables
+    var dateTime = "2020-03-16";
+    var distance = 23;
+    var steps = 40;
+    var sound = 1;
+    var horsepower = 30;
+    var gas = 170;
+
+    // test with textNodes - works
+    var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
+    var sensorTextNode2 = document.createTextNode(distance + ", ");  // test one
+
+    // datetime, distance, steps, sounds, horsepower, gas
+    var sensorParagraph = document.createElement("p"); // test two - works
+    sensorParagraph.id = "sensorParagraph";
+    sensorParagraph.appendChild(sensorTextNode);
+    sensorParagraph.appendChild(sensorTextNode2);
+    leftDiv.appendChild(sensorParagraph);
+
+
+    // test with lists
+    var sensorList = [
+        ["Date: " + dateTime],
+        ["Distance: " + distance],
+        ["Steps: " + steps],
+        ["Sound: " + sound],
+        ["Horsepower: " + horsepower],
+        ["Gas: " + gas]
+    ];
+
+    for (var i = 0; i < sensorList.length; i++)
+    {
+        var sensorListItem = document.createElement("li");
+        sensorListItem.className = "sensorListItem";
+        var sensorValue = document.createElement("p");
+        sensorValue.appendChild(document.createTextNode(sensorList[i][0]));
+        sensorListItem.appendChild(sensorValue);
+        leftDiv.appendChild(sensorListItem);
+    }
+    
+
+
+/*  leftDiv.appendChild(sensorTextNode); // test one
+    leftDiv.appendChild(sensorTextNode2); // test one
+*/
     main.appendChild(leftDiv);
 
     // div with picture
     var rightDiv = document.createElement("div"); 
+    var rightImage = document.createElement("img");
+    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/index_img.png";
+    rightImage.width = 400;
     rightDiv.className = "right-div";
+    rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
+ 
+/*     <script>
+        function changeImage(width) {
+            var image = document.getElementById("bilden");
+            image.setAttribute("width", width);
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Ändra bildstorlek</h2>
+    <input type="range" min="1" max="1300" value="300" oninput="changeImage(this.value)" /><br>
+    <img src="bil.jpg" id="bilden" width="300">
+</body> */
 
 }
 
-function getDataFromNodeText(tests){
-    document.getElementById("sensorValue").innerHTML = tests;
+function getDataFromNode(dateTime,distance,steps,sound,horsePower,gas) {
+    document.getElementById("dateTime").innerHTML = dateTime;
+    document.getElementById("distance").innerHTML = distance;
+    document.getElementById("steps").innerHTML = steps;
+    document.getElementById("sound").innerHTML = sound;
+    document.getElementById("horsepower").innerHTML = horsePower;
+    document.getElementById("gas").innerHTML = gas;
 }
 
 function addFooter(){

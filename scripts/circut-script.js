@@ -44,24 +44,21 @@ function addMain(){
     main.className = "main"; // assign name for css file
     document.body.appendChild(main); // add div to body
 
-    // add function for scalable sensor picture with sensor data
-
     // paragraph with text
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
-    var leftText = document.createTextNode("This is the circut for horse robot Cloudia. As you can see there are several parts needed, but not very advanced stuff.");
+    var leftText = document.createTextNode("This is the circut for horse robot Cloudia. As you can see there are several parts needed, and all important.");
     leftDiv.appendChild(leftText);
     main.appendChild(leftDiv);
 
     // div with picture
     var rightDiv = document.createElement("div"); 
     var rightImage = document.createElement("img");
-    rightImage.src = "https://www.google.com/search?q=horses&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiLseHY05XoAhV0AxAIHVtMA1kQ_AUoAXoECBkQAw#imgrc=qlMNMTKnuvouPM:";
-    rightImage.width = "250";
+    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.jpg";
+    rightImage.width = "350";
     rightDiv.className = "right-div";
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv); 
-
 }
 
 function addFooter(){

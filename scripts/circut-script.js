@@ -55,13 +55,15 @@ function addMain(){
     main.appendChild(leftDiv); // add leftDiv to main div
 
     // div with picture
-    var rightDiv = document.createElement("div"); 
-    var rightImage = document.createElement("img");
-    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.jpg";
-    rightImage.width = "350";
+    var rightDiv = document.createElement("div");
     rightDiv.className = "right-div";
+
+    var rightImage = document.createElement("img");
+    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.png";
+    rightImage.width = 400;
+
     rightDiv.appendChild(rightImage);
-    main.appendChild(rightDiv); 
+    main.appendChild(rightDiv);
 }
 
 function addFooter(){

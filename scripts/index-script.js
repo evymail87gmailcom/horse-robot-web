@@ -1,20 +1,20 @@
 console.log("Hello world from web script")
 
-function addPage(){
+function addPage() {
     var page = document.createElement("div");
-    page.className = "page"; 
+    page.className = "page";
     document.body.appendChild(page); // place page div in body div
     console.log("hello from page");
 }
 
-function addHeader(){
+function addHeader() {
     var header = document.createElement("div");
     header.className = "header"; // assign name for css file
     var text = document.createTextNode("Welcome");
     header.appendChild(text);
     document.body.appendChild(header); // add header to body
 }
- 
+
 function addMenu() {
     var menu = document.createElement("div");
     menu.className = "menu";
@@ -46,7 +46,7 @@ function addMenu() {
     }
 }
 
-function addMain(){
+function addMain() {
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
     document.body.appendChild(main); // add div to body
@@ -54,9 +54,9 @@ function addMain(){
     // div with text
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
-    var sensorParagraph = document.createElement("p"); // test two - paragraph to put all sensor values into
+    var textParagraph = document.createElement("p"); // test two - paragraph to put all sensor values into
     var leftText = document.createTextNode("Welcome. We've been expecting you. Here are the latest sensor values from cloudia: ");
-    sensorParagraph.appendChild(leftText);
+    textParagraph.appendChild(leftText);
 
 
     // test variables
@@ -70,8 +70,8 @@ function addMain(){
     // test with textNodes - works
     // var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
     // var sensorTextNode2 = document.createTextNode(distance + ", ");  // test one
-    // sensorParagraph.appendChild(sensorTextNode);
-    // sensorParagraph.appendChild(sensorTextNode2);
+    // textParagraph.appendChild(sensorTextNode);
+    // textParagraph.appendChild(sensorTextNode2);
 
     // test with lists
     var sensorList = [
@@ -83,49 +83,38 @@ function addMain(){
         ["Gas: " + gas]
     ];
 
-    for (var i = 0; i < sensorList.length; i++)
-    {
+    for (var i = 0; i < sensorList.length; i++) {
         var sensorListItem = document.createElement("li");
         sensorListItem.className = "sensorListItem";
         var sensorValue = document.createElement("p");
+        sensorValue.className = "sensorValue";
         sensorValue.appendChild(document.createTextNode(sensorList[i][0]));
         sensorListItem.appendChild(sensorValue);
-        sensorParagraph.appendChild(sensorListItem);
+        textParagraph.appendChild(sensorListItem);
     }
-        leftDiv.appendChild(sensorParagraph);
 
-/*  leftDiv.appendChild(sensorTextNode); // test one
-    leftDiv.appendChild(sensorTextNode2); // test one
-*/
+    leftDiv.appendChild(textParagraph);
+
+    /*  leftDiv.appendChild(sensorTextNode); // test one
+        leftDiv.appendChild(sensorTextNode2); // test one
+    */
     main.appendChild(leftDiv);
 
     // div with picture
-    var rightDiv = document.createElement("div"); 
+    var rightDiv = document.createElement("div");
+    rightDiv.className = "right-div";
+
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/index_img.png";
-    rightImage.width = 400;
-    rightDiv.className = "right-div";
+    rightImage.width = 500;
+
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
- 
-/*     <script>
-        function changeImage(width) {
-            var image = document.getElementById("bilden");
-            image.setAttribute("width", width);
-        }
-    </script>
-</head>
 
-<body>
-
-    <h2>Ändra bildstorlek</h2>
-    <input type="range" min="1" max="1300" value="300" oninput="changeImage(this.value)" /><br>
-    <img src="bil.jpg" id="bilden" width="300">
-</body> */
 
 }
 
-function getDataFromNode(dateTime,distance,steps,sound,horsePower,gas) {
+function getDataFromNode(dateTime, distance, steps, sound, horsePower, gas) {
     document.getElementById("dateTime").innerHTML = dateTime;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
@@ -134,7 +123,7 @@ function getDataFromNode(dateTime,distance,steps,sound,horsePower,gas) {
     document.getElementById("gas").innerHTML = gas;
 }
 
-function addFooter(){
+function addFooter() {
     var footer = document.createElement("div");
     footer.className = "footer"; // assign name for css file
     var footerText = document.createTextNode("© 2020 EM PROJECTS");
@@ -143,7 +132,7 @@ function addFooter(){
 }
 
 addPage();
-addHeader(); 
+addHeader();
 addMenu();
 addMain();
 addFooter();

@@ -43,25 +43,28 @@ function addMain() {
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
     document.body.appendChild(main); // add div to body
- 
+
     // add function for scalable sensor picture with sensor data
 
     // paragraph with text
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
+    var textParagraph = document.createElement("p"); // creates a paragraph so that all text throughout all pages can be adjusted in one setting
     var leftText = document.createTextNode("We used a lot of parts (not counting all the glue needed to assembly this rocket) for our Cloudia. There are four 180° servos, one ultrasonic sensor, two big sound sensors and one gas sensor that detacted combustible, flammable and toxic gases, and oxygen depletion.");
-    leftDiv.appendChild(leftText);
-    main.appendChild(leftDiv);
+
+    textParagraph.appendChild(leftText); // add textNode "leftText" to textParagraph
+    leftDiv.appendChild(textParagraph); // add p "textParagraph" to leftDiv
+    main.appendChild(leftDiv); // add leftDiv to main div
 
     // div with picture
-    var rightDiv = document.createElement("div"); 
+    var rightDiv = document.createElement("div");
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/circut_img.png";
     rightImage.width = "300";
     rightDiv.className = "right-div";
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
-    
+
 }
 
 function addFooter() {

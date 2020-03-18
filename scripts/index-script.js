@@ -54,13 +54,12 @@ function addMain(){
     // div with text
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
-    var leftText = document.createTextNode("Welcome. We've been expecting you.");
-    var horseSpeak = document.createTextNode(" HELLO. I'M CLOUDIA. HERE IS MY STATUS:");
-    leftDiv.appendChild(leftText);
-    leftDiv.appendChild(horseSpeak); 
+    var sensorParagraph = document.createElement("p"); // test two - paragraph to put all sensor values into
+    var leftText = document.createTextNode("Welcome. We've been expecting you. Here are the latest sensor values from cloudia: ");
+    sensorParagraph.appendChild(leftText);
 
 
-    // test varables
+    // test variables
     var dateTime = "2020-03-16";
     var distance = 23;
     var steps = 40;
@@ -69,16 +68,10 @@ function addMain(){
     var gas = 170;
 
     // test with textNodes - works
-    var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
-    var sensorTextNode2 = document.createTextNode(distance + ", ");  // test one
-
-    // datetime, distance, steps, sounds, horsepower, gas
-    var sensorParagraph = document.createElement("p"); // test two - works
-    sensorParagraph.id = "sensorParagraph";
-    sensorParagraph.appendChild(sensorTextNode);
-    sensorParagraph.appendChild(sensorTextNode2);
-    leftDiv.appendChild(sensorParagraph);
-
+    // var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
+    // var sensorTextNode2 = document.createTextNode(distance + ", ");  // test one
+    // sensorParagraph.appendChild(sensorTextNode);
+    // sensorParagraph.appendChild(sensorTextNode2);
 
     // test with lists
     var sensorList = [
@@ -97,10 +90,9 @@ function addMain(){
         var sensorValue = document.createElement("p");
         sensorValue.appendChild(document.createTextNode(sensorList[i][0]));
         sensorListItem.appendChild(sensorValue);
-        leftDiv.appendChild(sensorListItem);
+        sensorParagraph.appendChild(sensorListItem);
     }
-    
-
+        leftDiv.appendChild(sensorParagraph);
 
 /*  leftDiv.appendChild(sensorTextNode); // test one
     leftDiv.appendChild(sensorTextNode2); // test one

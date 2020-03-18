@@ -47,9 +47,12 @@ function addMain(){
         // div with text
         var leftDiv = document.createElement("div");
         leftDiv.className = "left-div";
+        var textParagraph = document.createElement("p"); // creates a paragraph so that all text throughout all pages can be adjusted in one setting
         var leftText = document.createTextNode("We embarked on this journey as novice programmers, unsure of what the results would be. Here you can follow our story to greatness - building the horse robot of our dreams.");
-        leftDiv.appendChild(leftText);
-        main.appendChild(leftDiv);
+        
+        textParagraph.appendChild(leftText); // add textNode "leftText" to textParagraph
+        leftDiv.appendChild(textParagraph); // add p "textParagraph" to leftDiv
+        main.appendChild(leftDiv); // add leftDiv to main div
     
         // div with picture
         var rightDiv = document.createElement("div"); 

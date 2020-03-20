@@ -59,7 +59,7 @@ function addMain(){
     rightDiv.className = "right-div";
 
     var rightImage = document.createElement("img");
-    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.png";
+    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.jpg";
     rightImage.width = 400;
 
     rightDiv.appendChild(rightImage);

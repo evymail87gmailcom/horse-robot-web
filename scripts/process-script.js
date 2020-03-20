@@ -55,12 +55,14 @@ function addMain(){
         main.appendChild(leftDiv); // add leftDiv to main div
     
         // div with picture
-        var rightDiv = document.createElement("div"); 
-        var rightImage = document.createElement("img");
-        rightImage.src = "https://marialoue.github.io/horse-robot-web/images/circut_img.png";
-        rightImage.width = "350";
+        var rightDiv = document.createElement("div");
         rightDiv.className = "right-div";
-        rightDiv.appendChild(rightImage);
+    
+        var rightImage = document.createElement("img");
+        rightImage.src = "https://marialoue.github.io/horse-robot-web/images/process_img.jpg";
+        rightImage.width = 400;
+    
+        rightDiv.appendChild(rightImage); 
         main.appendChild(rightDiv);
 }
 

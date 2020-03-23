@@ -50,7 +50,7 @@ function addMain() {
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
     var textParagraph = document.createElement("p"); // creates a paragraph so that all text throughout all pages can be adjusted in one setting
-    var leftText = document.createTextNode("We used a lot of parts (not counting all the glue needed to assembly this rocket) for our Cloudia. There are four 180° servos, one ultrasonic sensor, two big sound sensors and one gas sensor that detacted combustible, flammable and toxic gases, and oxygen depletion.");
+    var leftText = document.createTextNode("We used a lot of parts (not including all of the glue needed to assembly this rocket) for our Cloudia. There are four 180° servos, one ultrasonic sensor, two big sound sensors and one gas sensor that detacted combustible, flammable and toxic gases, and oxygen depletion. We also used one Arduino Uno and one Node MCU. ");
 
     textParagraph.appendChild(leftText); // add textNode "leftText" to textParagraph
     leftDiv.appendChild(textParagraph); // add p "textParagraph" to leftDiv

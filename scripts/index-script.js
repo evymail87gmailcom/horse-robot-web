@@ -1,12 +1,5 @@
 console.log("Hello world from web script")
 
-function addPage() {
-    var page = document.createElement("div");
-    page.className = "page";
-    document.body.appendChild(page); // place page div in body div
-    console.log("hello from page");
-}
-
 function addHeader() {
     var header = document.createElement("div");
     header.className = "header"; // assign name for css file
@@ -55,17 +48,23 @@ function addMain() {
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
     var textParagraph = document.createElement("p"); // test two - paragraph to put all sensor values into
-    var leftText = document.createTextNode("Welcome. We've been expecting you. Here are the latest sensor values from cloudia: ");
+    var leftText = document.createTextNode("Welcome. We've been expecting you. This is a project site for the course Embedded systems from Stockholm Institute of Technology . Here are the latest sensor values from cloudia: ");
     textParagraph.appendChild(leftText);
 
 
     // test variables
     var dateTime = "2020-03-16";
+    dateTime.id = "dateTime";
     var distance = 23;
+    distance.id = "distance";
     var steps = 40;
+    steps.id = "steps";
     var sound = 1;
+    sound.id = "sound";
     var horsepower = 30;
+    horsepower.id = "horsepower";
     var gas = 170;
+    gas.id = "gas";
 
     // test with textNodes - works
     // var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
@@ -114,12 +113,12 @@ function addMain() {
 
 }
 
-function getDataFromNode(dateTime, distance, steps, sound, horsePower, gas) {
+function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas) {
     document.getElementById("dateTime").innerHTML = dateTime;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
-    document.getElementById("horsepower").innerHTML = horsePower;
+    document.getElementById("horsepower").innerHTML = horsepower;
     document.getElementById("gas").innerHTML = gas;
 }
 

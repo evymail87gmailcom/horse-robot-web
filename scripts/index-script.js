@@ -54,17 +54,17 @@ function addMain() {
 
 
     // test variables
-    var dateTime = "2020-03-16 12:00";
+    var dateTime = document.createElement("p");
     dateTime.id = "dateTime";
-    var distance = 23;
+    var distance = document.createElement("p");
     distance.id = "distance";
-    var steps = 40;
+    var steps = document.createElement("p");
     steps.id = "steps";
-    var sound = 1;
+    var sound = document.createElement("p");
     sound.id = "sound";
-    var horsepower = 30;
+    var horsepower = document.createElement("p");
     horsepower.id = "horsepower";
-    var gas = 170;
+    var gas = document.createElement("p");
     gas.id = "gas";
 
     // test with textNodes - works

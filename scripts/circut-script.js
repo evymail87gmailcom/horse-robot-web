@@ -60,7 +60,7 @@ function addMain(){
 
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.jpg";
-    rightImage.width = 400;
+    rightImage.width = 450;
 
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);

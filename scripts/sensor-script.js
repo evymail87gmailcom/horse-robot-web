@@ -62,7 +62,7 @@ function addMain() {
 
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/sensors_img.png";
-    rightImage.width = 400;
+    rightImage.width = 500;
 
     rightDiv.appendChild(rightImage); 
     main.appendChild(rightDiv);

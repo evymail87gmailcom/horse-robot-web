@@ -48,7 +48,7 @@ function addMain() {
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
     var textParagraph = document.createElement("p"); // test two - paragraph to put all sensor values into
-    var leftText = document.createTextNode("Welcome. We've been expecting you. This is a project site for the course Embedded systems from Stockholm Institute of Technology . Here are the latest sensor values from cloudia: ");
+    var leftText = document.createTextNode("Welcome. We've been expecting you. The people behind this work of art is studying System Development - Internet of Things at Stockholm Institute of Technology and this site is a result of the course Embedded systems. We wanted to make a functioning horse robot, lets see how we did (our horse is named Cloudia since she is connected in a fog computing network). Here are the latest sensor values from Cloudia: ");
     textParagraph.appendChild(leftText);
 
 

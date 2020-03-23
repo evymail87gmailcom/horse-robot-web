@@ -1,5 +1,6 @@
 console.log("Hello world from web script")
 
+
 function addHeader() {
     var header = document.createElement("div");
     header.className = "header"; // assign name for css file
@@ -53,7 +54,7 @@ function addMain() {
 
 
     // test variables
-    var dateTime = "2020-03-16";
+    var dateTime = "2020-03-16 12:00";
     dateTime.id = "dateTime";
     var distance = 23;
     distance.id = "distance";
@@ -130,7 +131,6 @@ function addFooter() {
     document.body.appendChild(footer); // add div to body
 }
 
-addPage();
 addHeader();
 addMenu();
 addMain();

@@ -9,7 +9,7 @@ body{
     height: 100vh;
     word-wrap: break-word;
     box-sizing: border-box;
-    /* overflow: hidden; */
+    overflow: hidden; /* can be inactivated when troubleshooting */
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -86,7 +86,7 @@ li a:hover{
 
 .main{
     width: auto;
-    height: 45vh;
+    height: 60vh;
     background-color: rgba(153, 125, 107, 0.322);
     letter-spacing: 0.15rem;
     padding: 2rem;
@@ -111,6 +111,7 @@ li a:hover{
 
 /* li with sensor vaulues - differ from menu li */
 .sensorListItem{
+    width: 50vh;
     font-weight: normal;
     letter-spacing: 0.1rem; 
     float: unset;
@@ -120,6 +121,7 @@ li a:hover{
 /* p with sensor vaules - differ from menu li */
 .sensorValue{
     margin-top: 1rem;
+
 }
 
 .footer{

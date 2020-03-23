@@ -106,7 +106,7 @@ function addMain() {
 
     var rightImage = document.createElement("img");
     rightImage.src = "https://marialoue.github.io/horse-robot-web/images/index_img.png";
-    rightImage.width = 500;
+    rightImage.width = 400;
 
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);

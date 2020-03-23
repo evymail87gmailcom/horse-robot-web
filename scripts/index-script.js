@@ -54,18 +54,18 @@ function addMain() {
 
 
     // test variables
-    var dateTime = document.createElement("p");
-    dateTime.id = "dateTime";
-    var distance = document.createElement("p");
-    distance.id = "distance";
-    var steps = document.createElement("p");
-    steps.id = "steps";
-    var sound = document.createElement("p");
-    sound.id = "sound";
-    var horsepower = document.createElement("p");
-    horsepower.id = "horsepower";
-    var gas = document.createElement("p");
-    gas.id = "gas";
+    var dateTime1 = document.createElement("p");
+    dateTime1.id = "dateTime";
+    var distance1 = document.createElement("p");
+    distance1.id = "distance";
+    var steps1 = document.createElement("p");
+    steps1.id = "steps";
+    var sound1 = document.createElement("p");
+    sound1.id = "sound";
+    var horsepower1 = document.createElement("p");
+    horsepower1.id = "horsepower";
+    var gas1 = document.createElement("p");
+    gas1.id = "gas";
 
     // test with textNodes - works
     // var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
@@ -75,12 +75,12 @@ function addMain() {
 
     // test with lists
     var sensorList = [
-        ["Date: " + dateTime],
-        ["Distance: " + distance],
-        ["Steps: " + steps],
-        ["Sound: " + sound],
-        ["Horsepower: " + horsepower],
-        ["Gas: " + gas]
+        ["Date: " + dateTime1],
+        ["Distance: " + distance1],
+        ["Steps: " + steps1],
+        ["Sound: " + sound1],
+        ["Horsepower: " + horsepower1],
+        ["Gas: " + gas1]
     ];
 
     for (var i = 0; i < sensorList.length; i++) {

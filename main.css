@@ -9,7 +9,7 @@ body{
     height: 100vh;
     word-wrap: break-word;
     box-sizing: border-box;
-    overflow: hidden; /* can be inactivated when troubleshooting */
+    /*overflow: hidden; /* can be inactivated when troubleshooting */
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
     font-size: 1.5rem;
     line-height: 2rem;

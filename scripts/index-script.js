@@ -41,6 +41,9 @@ function addMenu() {
 }
 
 function addMain() {
+    // line break
+    var br = document.createElement("br");
+
     var main = document.createElement("div");
     main.className = "main"; // assign name for css file
     document.body.appendChild(main); // add div to body
@@ -48,39 +51,47 @@ function addMain() {
     // div with text
     var leftDiv = document.createElement("div");
     leftDiv.className = "left-div";
-    var textParagraph = document.createElement("p"); // test two - paragraph to put all sensor values into
-    var leftText = document.createTextNode("Welcome. We've been expecting you. The people behind this work of art is studying System Development - Internet of Things at Stockholm Institute of Technology and this site is a result of the course Embedded systems. We wanted to make a functioning horse robot, lets see how we did (our horse is named Cloudia since she is connected in a fog computing network). Here are the latest sensor values from Cloudia: ");
-    textParagraph.appendChild(leftText);
+    var textParagraphUpper = document.createElement("p"); // paragraph one for text only
+    var leftText = document.createTextNode("Welcome. We've been expecting you. The people behind this work of art is studying System Development - Internet of Things at Stockholm Institute of Technology and this site is a result of the course Embedded systems. We wanted to make a functioning horse robot, lets see how we did (our horse is named Cloudia since she is connected in a fog computing network). ");
+    textParagraphUpper.appendChild(leftText);
 
+    var textParagraphLower = document.createElement("p"); // paragraph two to put all sensor values into
+    var leftTextValues = document.createTextNode("Here are the latest sensor values from Cloudia: ");
+    textParagraphLower.appendChild(leftTextValues);
 
-    // test variables
-    var dateTime1 = document.createElement("p");
-    dateTime1.id = "dateTime";
-    var distance1 = document.createElement("p");
-    distance1.id = "distance";
-    var steps1 = document.createElement("p");
-    steps1.id = "steps";
-    var sound1 = document.createElement("p");
-    sound1.id = "sound";
-    var horsepower1 = document.createElement("p");
-    horsepower1.id = "horsepower";
-    var gas1 = document.createElement("p");
-    gas1.id = "gas";
+    // variables from node
+    var dateTime = document.createElement("p");
+    dateTime.id = "dateTime";
+    textParagraphLower.appendChild(dateTime);
 
-    // test with textNodes - works
-    // var sensorTextNode = document.createTextNode(dateTime + ", "); // test one - works but takes a lot of space
-    // var sensorTextNode2 = document.createTextNode(distance + ", ");  // test one
-    // textParagraph.appendChild(sensorTextNode);
-    // textParagraph.appendChild(sensorTextNode2);
+    var distance = document.createElement("p");
+    distance.id = "distance";
+    textParagraphLower.appendChild(distance);
+
+    var steps = document.createElement("p");
+    steps.id = "steps";
+    textParagraphLower.appendChild(steps);
+
+    var sound = document.createElement("p");
+    sound.id = "sound";
+    textParagraphLower.appendChild(sound);
+
+    var horsepower = document.createElement("p");
+    horsepower.id = "horsepower";
+    textParagraphLower.appendChild(horsepower);
+
+    var gas = document.createElement("p");
+    gas.id = "gas";
+    textParagraphLower.appendChild(gas);
 
     // test with lists
     var sensorList = [
-        ["Date: " + dateTime1],
-        ["Distance: " + distance1],
-        ["Steps: " + steps1],
-        ["Sound: " + sound1],
-        ["Horsepower: " + horsepower1],
-        ["Gas: " + gas1]
+        ["Date: " + dateTime],
+        ["Distance: " + distance],
+        ["Steps: " + steps],
+        ["Sound: " + sound],
+        ["Horsepower: " + horsepower],
+        ["Gas: " + gas]
     ];
 
     for (var i = 0; i < sensorList.length; i++) {
@@ -90,15 +101,14 @@ function addMain() {
         sensorValue.className = "sensorValue";
         sensorValue.appendChild(document.createTextNode(sensorList[i][0]));
         sensorListItem.appendChild(sensorValue);
-        textParagraph.appendChild(sensorListItem);
+        textParagraphLower.appendChild(sensorListItem);
     }
 
-    leftDiv.appendChild(textParagraph);
-
-    /*  leftDiv.appendChild(sensorTextNode); // test one
-        leftDiv.appendChild(sensorTextNode2); // test one
-    */
+    leftDiv.appendChild(textParagraphUpper);
+    leftDiv.appendChild(br);
+    leftDiv.appendChild(textParagraphLower);
     main.appendChild(leftDiv);
+
 
     // div with picture
     var rightDiv = document.createElement("div");
@@ -110,17 +120,17 @@ function addMain() {
 
     rightDiv.appendChild(rightImage);
     main.appendChild(rightDiv);
-
-
 }
 
-function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas) {
+function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas){
+    console.log("function getDataFromNode is starting ...");
     document.getElementById("dateTime").innerHTML = dateTime;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
     document.getElementById("horsepower").innerHTML = horsepower;
     document.getElementById("gas").innerHTML = gas;
+    console.log("function getDataFromNode has finished ...");
 }
 
 function addFooter() {
@@ -131,7 +141,9 @@ function addFooter() {
     document.body.appendChild(footer); // add div to body
 }
 
+
 addHeader();
 addMenu();
 addMain();
+getDataFromNode();
 addFooter();

@@ -66,7 +66,7 @@ function addMain() {
     var dateTimeText = document.createTextNode("DATE & TIME:");
     textParagraphSensors.appendChild(dateTimeText);
 
-    var dateTime = document.createElement("div");
+    var dateTime = document.createElement("span");
     dateTime.className = "dateTime";
     textParagraphSensors.appendChild(dateTime);
 

@@ -62,13 +62,37 @@ function addMain() {
     var textParagraphSensors = document.createElement("p"); // paragraph for sensor values, makes it easier to format in the css file
     textParagraphSensors.className = "textParagraphSensors";
 
-    
     // variables to get data from node
-    var dateTime = document.createElement("p");
-    dateTime.id = "dateTime";
     var dateTimeText = document.createTextNode("DATE & TIME:");
     textParagraphSensors.appendChild(dateTimeText);
-    // textParagraphSensors.appendChild(dateTime);
+
+    var dateTime = document.createElement("div");
+    dateTime.className = "dateTime";
+    textParagraphSensors.appendChild(dateTime);
+
+    var year = document.createElement("p");
+    year.id = "year";
+    dateTime.appendChild(year);
+    document.createTextNode("-");
+
+    var month = document.createElement("p");
+    month.id = "month";
+    dateTime.appendChild(month);
+    document.createTextNode("-");
+
+    var day = document.createElement("p");
+    day.id = "day";
+    dateTime.appendChild(day);
+    document.createTextNode(" ");
+
+    var hour = document.createElement("p");
+    hour.id = "hour";
+    dateTime.appendChild(hour);
+    document.createTextNode(":");
+
+    var minute = document.createElement("p");
+    minute.id = "minute";
+    dateTime.appendChild(minute);
 
     var distance = document.createElement("p");
     distance.id = "distance";
@@ -122,14 +146,14 @@ function addMain() {
 function getDateTime(year, month, day, hour, minut) {
     console.log("function getDateTime is running ..."); // making sure the function runs
     document.getElementById("year").innerHTML = year;
-    document.createTextNode("-");
+  //  document.createTextNode("-");
     document.getElementById("month").innerHTML = month;
-    document.createTextNode("-");
+    //document.createTextNode("-");
     document.getElementById("day").innerHTML = day;
-    document.createTextNode(" ");
+    //document.createTextNode(" ");
     document.getElementById("hour").innerHTML = hour;
-    document.createTextNode(":");
-    document.getElementById("minut").innerHTML = minut;
+    //document.createTextNode(":");
+    document.getElementById("minute").innerHTML = minut;
 }
 
 function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas){
@@ -155,5 +179,5 @@ function addFooter() {
 addHeader();
 addMenu();
 addMain();
-getDataFromNode();
+//getDataFromNode();
 addFooter();

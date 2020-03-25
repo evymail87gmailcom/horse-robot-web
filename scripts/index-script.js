@@ -146,19 +146,14 @@ function addMain() {
 function getDateTime(year, month, day, hour, minut) {
     console.log("function getDateTime is running ..."); // making sure the function runs
     document.getElementById("year").innerHTML = year;
-  //  document.createTextNode("-");
     document.getElementById("month").innerHTML = month;
-    //document.createTextNode("-");
     document.getElementById("day").innerHTML = day;
-    //document.createTextNode(" ");
     document.getElementById("hour").innerHTML = hour;
-    //document.createTextNode(":");
     document.getElementById("minute").innerHTML = minut;
 }
 
-function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas){
+function getDataFromNode(distance, steps, sound, horsepower, gas){
     console.log("function getDataFromNode is running ..."); // making sure the function runs
-    document.getElementById("dateTime").innerHTML = dateTime;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;

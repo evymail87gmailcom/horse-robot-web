@@ -59,7 +59,7 @@ function addMain(){
     rightDiv.className = "right-div";
 
     var rightImage = document.createElement("img");
-    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/KopplingschemaCloudia.jpg";
+    rightImage.src = "https://marialoue.github.io/horse-robot-web/images/Cloudia connections_bb.png";
     rightImage.width = 450;
 
     rightDiv.appendChild(rightImage);
@@ -74,6 +74,7 @@ function addFooter(){
     document.body.appendChild(footer); // add div to body
 }
 
+// add function to zoom in on img
 
 addHeader(); 
 addMenu();

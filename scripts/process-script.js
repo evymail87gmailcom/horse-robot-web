@@ -1,4 +1,4 @@
-console.log("Hello world from web script")
+console.log("Hello world from web script") // console log to test script is running
 
 function addHeader(){
     var header = document.createElement("div");

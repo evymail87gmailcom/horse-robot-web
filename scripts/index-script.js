@@ -1,4 +1,4 @@
-console.log("Hello world from web script")
+console.log("Hello world from web script") // console log to test script is running
 
 
 function addHeader() {
@@ -41,7 +41,7 @@ function addMenu() {
 }
 
 function addMain() {
-    // line break
+    // one line break
     var br = document.createElement("br");
 
     var main = document.createElement("div");
@@ -63,12 +63,12 @@ function addMain() {
     textParagraphSensors.className = "textParagraphSensors";
 
     
-    // variables from node
+    // variables to get data from node
     var dateTime = document.createElement("p");
     dateTime.id = "dateTime";
     var dateTimeText = document.createTextNode("DATE & TIME:");
     textParagraphSensors.appendChild(dateTimeText);
-    textParagraphSensors.appendChild(dateTime);
+    // textParagraphSensors.appendChild(dateTime);
 
     var distance = document.createElement("p");
     distance.id = "distance";
@@ -119,15 +119,28 @@ function addMain() {
     main.appendChild(rightDiv);
 }
 
+function getDateTime(year, month, day, hour, minut) {
+    console.log("function getDateTime is running ..."); // making sure the function runs
+    document.getElementById("year").innerHTML = year;
+    document.createTextNode("-");
+    document.getElementById("month").innerHTML = month;
+    document.createTextNode("-");
+    document.getElementById("day").innerHTML = day;
+    document.createTextNode(" ");
+    document.getElementById("hour").innerHTML = hour;
+    document.createTextNode(":");
+    document.getElementById("minut").innerHTML = minut;
+}
+
 function getDataFromNode(dateTime, distance, steps, sound, horsepower, gas){
-    console.log("function getDataFromNode is starting ...");
+    console.log("function getDataFromNode is running ..."); // making sure the function runs
     document.getElementById("dateTime").innerHTML = dateTime;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
     document.getElementById("horsepower").innerHTML = horsepower;
     document.getElementById("gas").innerHTML = gas;
-    console.log("function getDataFromNode has finished ...");
+    console.log("function getDataFromNode has finished");
 }
 
 function addFooter() {

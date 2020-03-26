@@ -124,6 +124,14 @@ function addMain() {
     textParagraphSensors.appendChild(gasText);
     textParagraphSensors.appendChild(gas);
 
+    var safetyLevel = document.createElement("p");
+    safetyLevel.id = "safetyBox";
+    var safetyLevelText = document.createTextNode("SafetyLevel: ");
+    var safetyVar = document.createTextNode("Good");
+    safetyVar.id = "safetyVar";
+    safetyLevel.appendChild(safetyVar);
+    textParagraphSensors.appendChild(safetyLevelText);
+    textParagraphSensors.appendChild(safetyLevel);
 
     leftDiv.appendChild(textParagraphUpper);
     leftDiv.appendChild(br);
@@ -152,8 +160,9 @@ function getDateTime(year, month, day, hour, minut) {
     document.getElementById("minute").innerHTML = minut;
 }
 
-function getDataFromNode(distance, steps, sound, horsepower, gas){
+function getDataFromNode(safetyvar, distance, steps, sound, horsepower, gas){
     console.log("function getDataFromNode is running ..."); // making sure the function runs
+    document.getElementById("safetyVar").innerHTML = safetyVar;
     document.getElementById("distance").innerHTML = distance;
     document.getElementById("steps").innerHTML = steps;
     document.getElementById("sound").innerHTML = sound;
